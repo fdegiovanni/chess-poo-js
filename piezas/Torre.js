@@ -1,4 +1,4 @@
-import {Pieza} from './Pieza.js';
+import {Pieza} from '../Pieza.js';
 class Torre extends Pieza {
     getMovimientos() {
     return [
