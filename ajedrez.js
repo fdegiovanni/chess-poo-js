@@ -1,11 +1,11 @@
 // Importamos las clases
 import { Tablero } from './Tablero.js';
-import { Rey } from './Rey.js';
-import { Reina } from './Reina.js';
-import { Torre } from './Torre.js';
-import { Alfil } from './Alfil.js';
-import { Caballo } from './Caballo.js';
-import { Peon } from './Peon.js';
+import { Rey } from './piezas/Rey.js';
+import { Reina } from './piezas/Reina.js';
+import { Torre } from './piezas/Torre.js';
+import { Alfil } from './piezas/Alfil.js';
+import { Caballo } from './piezas/Caballo.js';
+import { Peon } from './piezas/Peon.js';
 
 const tablero = new Tablero();
 

@@ -1,4 +1,4 @@
-import {Pieza} from './Pieza.js';
+import {Pieza} from '../Pieza.js';
 class Reina extends Pieza {
     getMovimientos() {
         return [
