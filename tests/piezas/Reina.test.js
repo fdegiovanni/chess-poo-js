@@ -1,4 +1,4 @@
-import { Reina } from '../piezas/Reina.js';
+import { Reina } from '../../piezas/Reina.js';
 
 describe('Reina', () => {
   let reinaBlanco;
@@ -19,6 +19,30 @@ describe('Reina', () => {
       [-1, -1],
       [1, -1],
       [-1, 1],
+      [2, 2],
+      [-2, -2],
+      [2, -2],
+      [-2, 2],
+      [3, 3],
+      [-3, -3],
+      [3, -3],
+      [-3, 3],
+      [4, 4],
+      [-4, -4],
+      [4, -4],
+      [-4, 4],
+      [5, 5],
+      [-5, -5],
+      [5, -5],
+      [-5, 5],
+      [6, 6],
+      [-6, -6],
+      [6, -6],
+      [-6, 6],
+      [7, 7],
+      [-7, -7],
+      [7, -7],
+      [-7, 7],
     ];
     expect(reinaBlanco.getMovimientos()).toEqual(movimientosEsperados);
     expect(reinaNegro.getMovimientos()).toEqual(movimientosEsperados);

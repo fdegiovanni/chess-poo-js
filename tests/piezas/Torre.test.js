@@ -1,4 +1,4 @@
-import { Torre } from '../piezas/Torre.js';
+import { Torre } from '../../piezas/Torre.js';
 
 describe('Torre', () => {
   let torreBlanco;

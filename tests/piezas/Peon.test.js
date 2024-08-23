@@ -1,4 +1,4 @@
-import { Peon } from '../piezas/Peon.js';
+import { Peon } from '../../piezas/Peon.js';
 
 describe('Peon', () => {
   let peonBlanco;
