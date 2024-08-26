@@ -1,4 +1,6 @@
-// Tablero.test.js
+/**
+ * @jest-environment jsdom
+ */
 import { Tablero } from '../Tablero.js';
 
 describe('Tablero', () => {
@@ -6,23 +8,31 @@ describe('Tablero', () => {
 
   beforeEach(() => {
     document.body.innerHTML = `
-      <div id="A1"></div>
-      <div id="A2"></div>
-      <div id="A3"></div>
-      <div id="A4"></div>
-      <div id="A5"></div>
-      <div id="A6"></div>
-      <div id="A7"></div>
-      <div id="A8"></div>
-      <div id="B1"></div>
-      <div id="B2"></div>
-      <div id="B3"></div>
-      <div id="B4"></div>
-      <div id="B5"></div>
-      <div id="B6"></div>
-      <div id="B7"></div>
-      <div id="B8"></div>
-      <!-- Add more divs for the rest of the board -->
+<div id="contenedor-tablero">
+        <!-- Etiquetas de números -->
+        <div class="numero" style="grid-row: 1;">8</div>
+        <div class="numero" style="grid-row: 2;">7</div>
+        <div class="numero" style="grid-row: 3;">6</div>
+        <div class="numero" style="grid-row: 4;">5</div>
+        <div class="numero" style="grid-row: 5;">4</div>
+        <div class="numero" style="grid-row: 6;">3</div>
+        <div class="numero" style="grid-row: 7;">2</div>
+        <div class="numero" style="grid-row: 8;">1</div>
+
+        <!-- Tablero -->
+        <div id="tablero"></div>
+
+        <!-- Etiquetas de letras -->
+        <div class="letra" style="grid-column: 2;">A</div>
+        <div class="letra" style="grid-column: 3;">B</div>
+        <div class="letra" style="grid-column: 4;">C</div>
+        <div class="letra" style="grid-column: 5;">D</div>
+        <div class="letra" style="grid-column: 6;">E</div>
+        <div class="letra" style="grid-column: 7;">F</div>
+        <div class="letra" style="grid-column: 8;">G</div>
+        <div class="letra" style="grid-column: 9;">H</div>
+    </div>
+
     `;
     tablero = new Tablero();
   });
