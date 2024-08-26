@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero de Ajedrez</title>
     <style>
+        #contenedor-tablero {
+            display: grid;
+            grid-template-columns: 20px repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px) 20px;
+            gap: 0;
+        }
         #tablero {
+            grid-column: 2 / span 8;
+            grid-row: 1 / span 8;
             display: grid;
             grid-template-columns: repeat(8, 50px);
             grid-template-rows: repeat(8, 50px);
+        }
+        .letra, .numero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
         .casilla {
             width: 50px;
@@ -23,11 +37,46 @@
         .negro {
             background-color: #b58863;
         }
+        .resaltada {
+            background-color: yellow !important;
+        }
+        .posible-movimiento {
+            background-color: rgba(255, 255, 0, 0.5) !important;
+        }
+        .numero {
+            grid-column: 1;
+        }
+        .letra {
+            grid-row: 9;
+        }
     </style>
 </head>
 <body>
     <h1>Tablero de Ajedrez</h1>
-    <div id="tablero"></div>
+    <div id="contenedor-tablero">
+        <!-- Etiquetas de números -->
+        <div class="numero" style="grid-row: 1;">8</div>
+        <div class="numero" style="grid-row: 2;">7</div>
+        <div class="numero" style="grid-row: 3;">6</div>
+        <div class="numero" style="grid-row: 4;">5</div>
+        <div class="numero" style="grid-row: 5;">4</div>
+        <div class="numero" style="grid-row: 6;">3</div>
+        <div class="numero" style="grid-row: 7;">2</div>
+        <div class="numero" style="grid-row: 8;">1</div>
+
+        <!-- Tablero -->
+        <div id="tablero"></div>
+
+        <!-- Etiquetas de letras -->
+        <div class="letra" style="grid-column: 2;">A</div>
+        <div class="letra" style="grid-column: 3;">B</div>
+        <div class="letra" style="grid-column: 4;">C</div>
+        <div class="letra" style="grid-column: 5;">D</div>
+        <div class="letra" style="grid-column: 6;">E</div>
+        <div class="letra" style="grid-column: 7;">F</div>
+        <div class="letra" style="grid-column: 8;">G</div>
+        <div class="letra" style="grid-column: 9;">H</div>
+    </div>
     <script type="module" src="ajedrez.js"></script>
 </body>
 </html>
