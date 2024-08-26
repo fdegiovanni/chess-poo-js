@@ -1,31 +1,28 @@
-# .github/workflows/test.yml
-name: Run Tests
+name: Coverage Check
 
 on:
   pull_request:
     branches:
-      - develop
       - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18]
-
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
+    - name: Run tests with coverage
       run: npm test
+
+    - name: Check coverage
+      run: npx nyc check-coverage --lines 60
