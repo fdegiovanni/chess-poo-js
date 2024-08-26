@@ -30,6 +30,10 @@ class Pieza {
     return "";
   }
 
+  destroy() {
+    this.posicion = null;
+  }
+
 }
 
 export { Pieza };
