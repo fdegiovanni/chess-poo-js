@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { Tablero } from '../Tablero.js';
+import { Tablero } from '../src/Tablero.js';
 
 describe('Tablero', () => {
   let tablero;

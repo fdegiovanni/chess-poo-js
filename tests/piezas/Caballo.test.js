@@ -1,4 +1,4 @@
-import { Caballo } from '../../piezas/Caballo.js';
+import { Caballo } from '../../src/piezas/Caballo.js';
 
 describe('Caballo', () => {
     let caballoBlanco;

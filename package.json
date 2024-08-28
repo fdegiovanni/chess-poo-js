@@ -1,6 +1,23 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "nyc --reporter=html --reporter=text  jest"
+  },
+  "nyc": {
+    "include": [
+      "**/*.js"
+    ],
+    "exclude": [
+      "tests/**/*.js",
+      "coverage/**/*.js",
+      "node_modules/**/*.js",
+      "jest.config.js",
+      "babel.config.js"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "all": true
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -9,6 +26,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "nyc": "^17.0.0"
   }
 }

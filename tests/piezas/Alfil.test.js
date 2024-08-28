@@ -1,4 +1,4 @@
-import { Alfil } from '../../piezas/Alfil.js';
+import { Alfil } from '../../src/piezas/Alfil.js';
 
 describe('Alfil', () => {
     let alfilBlanco;
