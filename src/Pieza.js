@@ -14,10 +14,6 @@ class Pieza {
     return [];
   }
 
-  dibujar() {
-    return "🧐";
-  }
-
   getColor() {
     return this.color;
   }
@@ -32,6 +28,10 @@ class Pieza {
 
   destroy() {
     this.posicion = null;
+  }
+
+  toString() {
+    return `${this.constructor.name} ${this.posicion} ${this.color}`;
   }
 
 }
